@@ -4,14 +4,9 @@ def factorial_result(n):
         fact *= i
     return fact
     
-print(factorial_result(1))
-
 def factorial_result_rec(n):
-    if n == 1:
-        return n
-    else:
-        temp = factorial_result(n - 1)
-        temp = temp * n
-    return temp
-    
-print(factorial_result_rec(1))
+    if n == 1: return n
+    else: return n * factorial_result_rec(n - 1)
+
+print(factorial_result(1))
+print(factorial_result_rec(5))
